@@ -1,0 +1,17 @@
+---
+# tasks file for anaconda
+
+- name: download Anaconda
+  get_url:
+    url: "{{ anaconda_url }}"
+    dest: /tmp/miniconda.sh
+    mode: '0755'
+  become: true
+  become_user: "{{ anaconda_user }}"
+
+- name: install Anaconda
+  command: /tmp/miniconda.sh -b -p "{{ anaconda_path }}"
+  args:
+    creates: "{{ anaconda_path }}"
+  become: true
+  become_user: "{{ anaconda_user }}"

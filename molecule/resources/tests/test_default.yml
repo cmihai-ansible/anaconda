@@ -1,0 +1,5 @@
+# Molecule managed
+---
+file:
+  /home/ansible/anaconda3/bin/python:
+    exists: true

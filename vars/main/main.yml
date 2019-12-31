@@ -1,0 +1,10 @@
+---
+# vars file for packages
+
+# Detected OS
+my_os: "{{ ansible_distribution }}_{{ ansible_distribution_major_version }}"
+
+# Packages lists
+anaconda_packages_prereq: "{{ _anaconda_packages_prereq['all']
+  | union ( _anaconda_packages_prereq[my_os]
+  | default([]) ) }}"

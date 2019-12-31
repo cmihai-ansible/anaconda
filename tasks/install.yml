@@ -1,0 +1,8 @@
+---
+# Install packages
+
+- name: prereq packages are installed
+  package:
+    name: "{{ anaconda_packages_prereq }}"
+    state: present
+  become: true

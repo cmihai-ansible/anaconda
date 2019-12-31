@@ -1,0 +1,21 @@
+---
+# Prereq packages: they get installed first
+_anaconda_packages_prereq:
+  all:
+    - tar
+    - gzip
+    - bzip2
+  CentOS_7:
+    - gcc
+  RedHat_7:
+    - gcc
+  CentOS_8:
+    - gcc
+  RedHat_8:
+    - gcc
+  Fedora_31:
+    - gcc
+  Debian_10:
+    - build-essential
+  Ubuntu_18:
+    - build-essential
